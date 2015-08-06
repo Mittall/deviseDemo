@@ -1,0 +1,38 @@
+welcome user!!!
+<br>
+<!--<% my_password = BCrypt::Password.create("mittal123") %>
+<br>
+<%= my_password.inspect %>
+<br>
+<% my_dpassword = BCrypt::Password.new("$2a$10$JBuLxIjQCGxdSnhQcV.TFO3PGPF7zZ.5KgI/S4PU3jXHlKid/GmiK") %>
+<br>
+<%= my_dpassword %>-->
+
+
+<!--<%= @pass %>-->
+
+<table>
+  <thead>
+    <tr>
+      <th>Uemail</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+	
+        <td><%= user.encrypted_password %></td>
+	
+	
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+

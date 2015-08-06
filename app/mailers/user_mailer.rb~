@@ -1,0 +1,18 @@
+class UserMailer < Devise::Mailer
+  
+  default :from => "anshuls.virtueinfo@gmail.com"
+
+  def headers_for(action, opts)
+    headers = {
+     :subject       => "Conformation Mail",
+     :from          => resource.invited_by.email,
+     :to            => resource.email,
+     :template_path => template_paths
+  }.merge(opts)
+  end
+
+   #def self.mailer_name
+    #"devise/mailer"
+   #end
+
+end
